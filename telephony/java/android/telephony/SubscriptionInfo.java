@@ -38,8 +38,6 @@ import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
-import com.android.telephony.Rlog;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

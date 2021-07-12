@@ -591,7 +591,9 @@ public class VolumeDialogImpl implements VolumeDialog,
                 final boolean volumePanelOnLeft = TunerService.parseIntegerSwitch(newValue, isAudioPanelOnLeftSide());
                 if (mVolumePanelOnLeft != volumePanelOnLeft) {
                     mVolumePanelOnLeft = volumePanelOnLeft;
-                    triggerChange = true;
+                    mHandler.post(() -> {
+                        mControllerCallbackH.onConfigurationChanged();
+                    });
                 }
                 break;
             case AUDIO_PANEL_VIEW_MEDIA:
